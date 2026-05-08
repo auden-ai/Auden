@@ -12,7 +12,10 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from groq import Groq
 from dotenv import load_dotenv
-import phone_control as pc
+try:
+    import phone_control as pc
+except:
+    pc = None
 
 # ── Load environment ──────────────────────────────────────────
 load_dotenv()
