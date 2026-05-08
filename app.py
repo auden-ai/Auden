@@ -23,8 +23,8 @@ def static_files(filename):
 @app.route('/chat', methods=['POST'])
 def chat():
     try:
-        from groq import Groq
-        client = Groq(api_key=os.environ.get("GROQ_API_KEY",""))
+        import groq
+        client = groq.Groq(api_key=os.environ.get("GROQ_API_KEY",""))
         msg = request.json.get('message','')
         history.append({"role":"user","content":msg})
         res = client.chat.completions.create(
