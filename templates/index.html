@@ -342,25 +342,6 @@ html,body{height:100%;background:#000;color:var(--white);font-family:'Rajdhani',
       <div id="greetText">Hi Sir,</div>
       <div id="questionText">Where should we start?</div>
 
-      <div id="suggestions">
-        <div class="sugBtn" onclick="sendQuick('Meri battery kitni hai aur kya charging chal rahi hai?')">
-          <span class="sugIcon">🔋</span>
-          <span class="sugText">Battery status check karo</span>
-        </div>
-        <div class="sugBtn" onclick="sendQuick('Torch on karo')">
-          <span class="sugIcon">🔦</span>
-          <span class="sugText">Torch on karo</span>
-        </div>
-        <div class="sugBtn" onclick="sendQuick('Aaj ka weather kaisa hai?')">
-          <span class="sugIcon">🌤️</span>
-          <span class="sugText">Aaj ka weather batao</span>
-        </div>
-        <div class="sugBtn" onclick="sendQuick('Meri current GPS location batao')">
-          <span class="sugIcon">📍</span>
-          <span class="sugText">Meri location batao</span>
-        </div>
-      </div>
-    </div>
 
     <!-- CHAT AREA -->
     <div id="chatArea">
@@ -389,7 +370,7 @@ html,body{height:100%;background:#000;color:var(--white);font-family:'Rajdhani',
       <button class="circleBtn" id="plusBtn" onclick="togglePlusMenu()">＋</button>
       <input id="msgInput" type="text" placeholder="Ask AUDEN..." onkeydown="if(event.key==='Enter')sendMessage()">
       <button class="circleBtn" id="micBtn" onclick="toggleVoice()">🎤</button>
-      <button id="sendBtn" onclick="sendMessage()">⚡</button>
+      <button id="sendBtn" onclick="sendMessage()">➤</button>
     </div>
   </div>
 
