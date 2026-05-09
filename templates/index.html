@@ -620,9 +620,9 @@ async function speakElevenLabs(text){
     const url=URL.createObjectURL(blob);
     const audio=new Audio(url);
     audio.onended=()=>{isSpeaking=false;setOrbState('online');URL.revokeObjectURL(url);};
-    audio.onerror=()=>{isSpeaking=false;setOrbState('online');speakBrowser(text);};
+    audio.onerror=()=>{isSpeaking=false;setOrbState('online');// voice disabled};
     audio.play();
-  }catch(e){isSpeaking=false;setOrbState('online');speakBrowser(text);}
+  }catch(e){isSpeaking=false;setOrbState('online');// voice disabled}
 }
 
 function speakBrowser(text){
@@ -661,7 +661,7 @@ async function sendMessage(){
     });
     const data=await res.json();
     showTyping(false);isThinking=false;
-    if(data.response){addMessage('auden',data.response);speakElevenLabs(data.response);}
+    if(data.response){addMessage('auden',data.response);// voice disabled}
   }catch(e){
     showTyping(false);isThinking=false;setOrbState('online');
     addMessage('auden','Connection error, Sir.');
